@@ -2,26 +2,30 @@ import React from "react";
 import Autosuggest from "react-autosuggest";
 import AutosuggestHighlightMatch from "autosuggest-highlight/match";
 import AutosuggestHighlightParse from "autosuggest-highlight/parse";
-const people = [
+const addressArray = [
   {
-    first: "Charlie",
-    last: "Brown",
-    twitter: "dancounsell",
+    add1: "10-a",
+    add2: "K-G Park",
+    zipcode: "382475",
+    city: "Ahmedabad",
   },
   {
-    first: "Charlotte",
-    last: "White",
-    twitter: "mtnmissy",
+    add1: "11-y",
+    add2: "Swareet",
+    zipcode: "382485",
+    city: "Ahmedabad",
   },
   {
-    first: "Chloe",
-    last: "Jones",
-    twitter: "ladylexy",
+    add1: "78521",
+    add2: "Green acres",
+    zipcode: "382477",
+    city: "Ahmedabad",
   },
   {
-    first: "Cooper",
-    last: "King",
-    twitter: "steveodom",
+    add1: "Gatlodia",
+    add2: "Karmacity",
+    zipcode: "382485",
+    city: "Ahmedabad",
   },
 ];
 
@@ -39,15 +43,17 @@ function getSuggestions(value) {
 
   const regex = new RegExp("\\b" + escapedValue, "i");
 
-  return people.filter((person) => regex.test(getSuggestionValue(person)));
+  return addressArray.filter((person) =>
+    regex.test(getSuggestionValue(person))
+  );
 }
 
 function getSuggestionValue(suggestion) {
-  return `${suggestion.first} ${suggestion.last}`;
+  return `${suggestion.add1} ${suggestion.add2} ${suggestion.city} ${suggestion.zipcode}`;
 }
 
 function renderSuggestion(suggestion, { query }) {
-  const suggestionText = `${suggestion.first} ${suggestion.last}`;
+  const suggestionText = `${suggestion.add1} ${suggestion.add2} ${suggestion.city} ${suggestion.zipcode}`;
   const matches = AutosuggestHighlightMatch(suggestionText, query);
   const parts = AutosuggestHighlightParse(suggestionText, matches);
 

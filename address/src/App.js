@@ -10,8 +10,7 @@ import NewAddress from "./components/NewAddress";
 function App() {
   return (
     <div className="App">
-      <Address />
-      <AddressConfirmationDialog />
+      {/* <Address /> */}
       <NewAddress />
     </div>
   );
