@@ -1,9 +1,7 @@
 import React from "react";
 import Autosuggest from "react-autosuggest";
-import {
-  AutosuggestHighlightMatch,
-  AutosuggestHighlightParse,
-} from "autosuggest-highlight";
+import AutosuggestHighlightMatch from "autosuggest-highlight/match";
+import AutosuggestHighlightParse from "autosuggest-highlight/parse";
 const people = [
   {
     first: "Charlie",
