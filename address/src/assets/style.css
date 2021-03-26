@@ -156,6 +156,11 @@
   justify-content: center;
 }
 
+.checkout__form .row {
+  align-items: center;
+  justify-content: center;
+}
+
 .site-btn {
   font-size: 12px;
   color: #ffffff;
