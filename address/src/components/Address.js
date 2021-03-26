@@ -3,12 +3,12 @@ import AddressConfirmationDialogs from "./AddressConfirmDialog";
 export default class Address extends Component {
   state = {
     openModal: false,
-    hno: "10",
-    society: "k-g-park",
-    landmark: "Indira bridge",
-    state: "Gujarat",
-    city: "Ahmedabad",
-    pincode: "382475",
+    // hno: "10",
+    // society: "k-g-park",
+    // landmark: "Indira bridge",
+    // state: "Gujarat",
+    // city: "Ahmedabad",
+    // pincode: "382475",
   };
   cityList = [
     { name: "Ahmedabad" },
