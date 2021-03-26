@@ -61,10 +61,11 @@ export default function AddressConfirmationDialogs(props) {
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
-        maxWidth="md"
+        maxWidth="sm"
+        fullWidth={true}
       >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Address Confirmation
+          Did you mean this address?
         </DialogTitle>
         <DialogContent dividers>
           {address && (
@@ -80,8 +81,11 @@ export default function AddressConfirmationDialogs(props) {
           )}
         </DialogContent>
         <DialogActions>
-          <Button autoFocus onClick={handleClose} color="primary">
-            Save changes
+          <Button onClick={handleClose} color="primary">
+            Disagree
+          </Button>
+          <Button onClick={handleClose} color="primary" autoFocus>
+            Agree
           </Button>
         </DialogActions>
       </Dialog>

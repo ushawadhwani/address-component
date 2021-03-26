@@ -98,7 +98,7 @@ export default class Address extends Component {
 
                     <div className="checkout__input">
                       <p>
-                        Pin Code<span>*</span>
+                        Zip Code<span>*</span>
                       </p>
                       <input
                         name="pincode"
