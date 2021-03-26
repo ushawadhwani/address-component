@@ -43,13 +43,13 @@ function getSuggestions(value) {
 
   const regex = new RegExp("\\b" + escapedValue, "i");
 
-  return addressArray.filter((person) =>
-    regex.test(getSuggestionValue(person))
+  return addressArray.filter((person, index) =>
+    regex.test(getSuggestionValue(person, index))
   );
 }
 
-function getSuggestionValue(suggestion) {
-  return `${suggestion.add1} ${suggestion.add2} ${suggestion.city} ${suggestion.zipcode}`;
+function getSuggestionValue(suggestion, index) {
+  return ` ${index}${suggestion.add1} ${suggestion.add2} ${suggestion.city} ${suggestion.zipcode}`;
 }
 
 function renderSuggestion(suggestion, { query }) {
